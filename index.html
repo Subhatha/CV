@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subhatha | Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h1>Hi, I'm Subhatha</h1>
+      <img src="my.jpg" alt="Subhatha's Photo" class="profile-photo" />
+      <p>
+        I am a versatile tech professional with hands-on experience in web development, data management, 
+        and cybersecurity. Skilled in tools like Node.js, SQL, Firebase, and MongoDB, I build scalable backend 
+        systems and data-driven solutions. I also work confidently with front-end technologies, version control, 
+        and secure development practices. With proficiency across Linux, macOS, Windows, and mobile platforms, 
+        I bring adaptability to every environment. I actively leverage AI tools to enhance efficiency, automate tasks, 
+        and deliver smarter solutions. My GitHub showcases full-stack, backend, and data-centric projects that reflect 
+        my broad technical expertise.
+      </p>
+      <a href="https://github.com/Subhatha" target="_blank" class="btn">View My GitHub</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Office & Data Entry:</strong> Microsoft Excel, Word, PowerPoint with high accuracy and speed.</li>
+        <li><strong>Database Management:</strong> MySQL, PostgreSQL, MongoDB (relational and NoSQL systems).</li>
+        <li><strong>Cloud Databases:</strong> Firebase, MongoDB Atlas with scalable cloud integration.</li>
+        <li><strong>Backend Development:</strong> Node.js, Express for building APIs and backend logic.</li>
+        <li><strong>AI Tools & Automation:</strong> Experience with ChatGPT, GitHub Copilot, and other automation tools.</li>
+        <li><strong>SQL Expertise:</strong> Query writing, optimization, and data modeling.</li>
+        <li><strong>Version Control:</strong> Git and GitHub for source control and collaborative workflows.</li>
+        <li><strong>Cybersecurity Awareness:</strong> Basic knowledge of secure coding and system hardening.</li>
+        <li><strong>Hardware Knowledge:</strong> Computer assembly, troubleshooting, and maintenance.</li>
+        <li><strong>Cross-Platform Experience:</strong> Skilled in Linux, macOS, Windows, and mobile environments.</li>
+        <li><strong>Problem Solving:</strong> Analytical thinking and clean, efficient solution development.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+
+      <div class="edu-entry">
+        <h3>Bachelor of Computer Science</h3>
+        <p><strong>Liepaja University</strong> | 2022 – 2025</p>
+        <p>Focused on databases, backend development, and cloud systems.</p>
+      </div>
+
+      <div class="edu-entry">
+        <h3>Bachelor of Computer Systems</h3>
+        <p><strong>Riga Technical University</strong> | 2020 – 2022</p>
+        <p>Focused on computer systems engineering and networking.</p>
+      </div>
+
+      <div class="edu-entry">
+        <h3>Diploma in Network Administration</h3>
+        <p><strong>Vocational Training Centre</strong> | 2019 – 2020</p>
+        <p>600 hours in hardware and networking theory and practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Professional Experience</h2>
+
+      <div class="exp-entry">
+        <h3>App Developer</h3>
+        <p><strong>Tech in Asia</strong> | 2024 – 2025</p>
+        <p>Built data-driven mobile apps with Firebase and Node.js. Managed user data and backend APIs.</p>
+      </div>
+
+      <div class="exp-entry">
+        <h3>Network Administrator</h3>
+        <p><strong>Tech in Asia</strong> | 2022 – 2023</p>
+        <p>Secured and managed enterprise networks and troubleshooting systems.</p>
+      </div>
+
+      <div class="exp-entry">
+        <h3>Web Designer</h3>
+        <p><strong>Tech in Asia</strong> | 2021 – 2022</p>
+        <p>Created responsive websites, focusing on backend integration and UI/UX design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Send a message or find me via GitHub, LinkedIn, or email.</p>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="formStatus" style="color: green; margin-top: 10px;"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About</h3>
+      <p>A versatile tech enthusiast skilled in full-stack development, data, cybersecurity, and AI tools. Cross-platform expert with real-world experience.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> <a href="mailto:kaumudnet@gmail.com">kaumudnet@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+37125434109">+371 2543 4109</a></p>
+      <p><strong>Location:</strong> Liepaja, Latvia</p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Connect</h3>
+      <div class="social-icons">
+        <a href="https://github.com/Subhatha" target="_blank"><img src="github.svg" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/subhatha-senanayake-8757221a2/" target="_blank"><img src="linkedin.svg" alt="LinkedIn"></a>
+        <a href="mailto:kaumudnet@gmail.com"><img src="mail.svg" alt="Email"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Subhatha. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

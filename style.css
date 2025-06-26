@@ -1,0 +1,354 @@
+/* =========================
+   Reset & Base Styles
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 70px; /* Space for sticky header */
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  text-decoration: none;
+  color: #005f99;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #ff6f61;
+}
+
+/* =========================
+   Header / Nav Bar
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+nav a {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  color: #005f99;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff6f61;
+  border-bottom-color: #ff6f61;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #005f99;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+/* =========================
+   Profile Photo
+========================= */
+.profile-photo-container {
+  margin: 20px auto 40px;
+  width: 400px;
+  max-width: 90vw;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 95, 153, 0.25);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 600px;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 111, 97, 0.35);
+}
+
+/* =========================
+   Sections
+========================= */
+.section {
+  min-height: 100vh;
+  padding: 140px 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  margin: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgb(0 95 153 / 0.15);
+  transition: box-shadow 0.3s ease;
+}
+.section:hover {
+  box-shadow: 0 16px 35px rgb(255 111 97 / 0.25);
+}
+.container {
+  max-width: 700px;
+  padding: 0 15px;
+}
+
+/* =========================
+   Text Elements
+========================= */
+h1 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #005f99;
+}
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+p {
+  font-size: 1.15rem;
+  margin-bottom: 1.3rem;
+  color: #363636;
+}
+
+/* =========================
+   Education & Experience
+========================= */
+.edu-entry, .exp-entry {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.edu-entry h3, .exp-entry h3 {
+  margin: 0;
+  color: #2e86de;
+}
+.edu-entry p, .exp-entry p {
+  margin: 5px 0;
+}
+
+/* =========================
+   Skills List
+========================= */
+.skills-list {
+  list-style-type: square;
+  margin: 1.2rem 0;
+  padding-left: 1.5rem;
+  text-align: left;
+  font-size: 1.15rem;
+  color: #333;
+}
+.skills-list li {
+  margin-bottom: 0.7rem;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #005f99, #ff6f61);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 700;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px rgb(255 111 97 / 0.4);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.btn:hover {
+  background: linear-gradient(45deg, #ff6f61, #005f99);
+  box-shadow: 0 8px 25px rgb(0 95 153 / 0.6);
+}
+
+/* =========================
+   Form Styling
+========================= */
+form {
+  margin-top: 15px;
+  text-align: left;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 8px 0 18px;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+form input:focus, form textarea:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 10px rgb(255 111 97 / 0.5);
+  outline: none;
+}
+form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #ff6f61;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgb(255 111 97 / 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+form button:hover {
+  background: #e85a4f;
+  box-shadow: 0 8px 25px rgb(232 90 79 / 0.7);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  header {
+    padding: 10px 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 58px;
+    right: 0;
+    width: 200px;
+    height: calc(100vh - 58px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: -4px 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-top: 2rem;
+  }
+  nav ul.open {
+    transform: translateX(0);
+  }
+  nav li {
+    margin-bottom: 1.3rem;
+    text-align: right;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  nav a {
+    font-size: 1.3rem;
+  }
+  .section {
+    margin: 20px 10px;
+    padding: 100px 15px 60px;
+  }
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  background-color: #3d3d3d;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.site-footer h3 {
+  color: #ff6f61;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.site-footer p {
+  font-size: 1.15rem;
+  margin-bottom: 1.3rem;
+  color: #d0d0d0;
+  font-weight: 300; /* Lighter font weight added */
+  text-align: center;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #eaf2ff;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
