@@ -65,3 +65,22 @@ contactForm.addEventListener('submit', async (e) => {
     console.error('Error adding document: ', error);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    toggle.classList.toggle('open');
+  });
+
+  // Optional: Close overlay when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+    });
+  });
+});
+
