@@ -11,7 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-  <!-- EmailJS Integration -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -54,18 +54,16 @@
       <h2>Skills</h2>
       <ul class="skills-list">
         <li><strong>AI tools:</strong> ChatGPT, Gemini, Grok, Copilot</li>
-        <li><strong>Office and systems:</strong> Microsoft Excel, Word, PowerPoint with high accuracy and speed.</li>
-        <li><strong>Database Management:</strong> MySQL, PostgreSQL, MongoDB (relational and NoSQL systems).</li>
-        <li><strong>Cloud Databases:</strong> Firebase, MongoDB Atlas with scalable cloud integration.</li>
-        <li><strong>Backend Development:</strong> Node.js, Express for building APIs and backend logic.</li>
-        <li><strong>AI Tools & Automation:</strong> Experience with ChatGPT, GitHub Copilot, and other automation tools.</li>
-        <li><strong>SQL Expertise:</strong> Query writing, optimization, and data modeling.</li>
-        <li><strong>Version Control:</strong> Git and GitHub for source control and collaborative workflows.</li>
-        <li><strong>Cybersecurity Awareness:</strong> Currently working on anomaly detection on enterprise networks using machine learning and AI.</li>
-        <li><strong>Hardware Knowledge:</strong> Computer assembly, troubleshooting, and maintenance.</li>
-        <li><strong>Cross-Platform Experience:</strong> Skilled in Linux, macOS, Windows, and mobile environments.</li>
-        <li><strong>Problem Solving:</strong> Analytical thinking and clean, efficient solution development.</li>
-        <li><strong>Extra:</strong> Working with social media, video editing, and marketing skills along with drone pilot EASA certification.</li>
+        <li><strong>Office and systems:</strong> Microsoft Excel, Word, PowerPoint</li>
+        <li><strong>Database Management:</strong> MySQL, PostgreSQL, MongoDB</li>
+        <li><strong>Cloud Databases:</strong> Firebase, MongoDB Atlas</li>
+        <li><strong>Backend Development:</strong> Node.js, Express</li>
+        <li><strong>Version Control:</strong> Git and GitHub</li>
+        <li><strong>Cybersecurity Awareness:</strong> Anomaly detection on enterprise networks</li>
+        <li><strong>Hardware Knowledge:</strong> Computer assembly, troubleshooting, maintenance</li>
+        <li><strong>Cross-Platform Experience:</strong> Linux, macOS, Windows, mobile environments</li>
+        <li><strong>Problem Solving:</strong> Analytical thinking, efficient solutions</li>
+        <li><strong>Extra:</strong> Social media, video editing, marketing, drone pilot EASA certification</li>
       </ul>
     </div>
   </section>
@@ -104,12 +102,12 @@
       <div class="exp-entry">
         <h3>Developer</h3>
         <p><strong>Tech in Asia</strong> | 2022 – 2023</p>
-        <p>Secured and managed enterprise networks, created responsive websites, focusing on backend integration and UI/UX design.</p>
+        <p>Secured enterprise networks and created responsive websites with backend integration.</p>
       </div>
       <div class="exp-entry">
         <h3>System Engineer</h3>
         <p><strong>Game Street Colombo</strong> | 2021 – 2022</p>
-        <p>Worked as a computer hardware team lead in customer care environment and gained social-technical skills.</p>
+        <p>Led computer hardware team in a customer care environment and gained social-technical skills.</p>
       </div>
     </div>
   </section>
@@ -135,7 +133,7 @@
     <div class="footer-container">
       <div class="footer-about">
         <h3>About</h3>
-        <p>A versatile tech enthusiast skilled in full-stack development, data, cybersecurity, and AI tools. Cross-platform expert with real-world experience.</p>
+        <p>A versatile tech enthusiast skilled in full-stack development, data, cybersecurity, and AI tools.</p>
       </div>
       <div class="footer-contact">
         <h3>Contact</h3>
@@ -157,38 +155,7 @@
     </div>
   </footer>
 
-  <!-- Your Custom Scripts -->
+  <!-- Custom Scripts -->
   <script src="script.js"></script>
-
-  <!-- EmailJS Form Handling -->
-<!-- Place this at the end of body -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Initialize EmailJS with your public key
-    emailjs.init("5Q5uSi6mrokaZM-cS");
-
-    const form = document.getElementById("contactForm");
-    if (!form) return;
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      emailjs.send("service_mnhzbph", "template_j6g0hmg", {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-      })
-      .then(function() {
-        document.getElementById("formStatus").textContent = "✅ Message sent successfully!";
-        form.reset();
-      }, function(error) {
-        document.getElementById("formStatus").textContent = "❌ Failed to send message. Try again.";
-        console.error("EmailJS error:", error);
-      });
-    });
-  });
-</script>
-
 </body>
 </html>
