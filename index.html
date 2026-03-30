@@ -161,30 +161,34 @@
   <script src="script.js"></script>
 
   <!-- EmailJS Form Handling -->
-  <script>
-    emailjs.init("5Q5uSi6mrokaZM-cS"); // Public Key
+<!-- Place this at the end of body -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize EmailJS with your public key
+    emailjs.init("5Q5uSi6mrokaZM-cS");
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.getElementById("contactForm");
+    const form = document.getElementById("contactForm");
+    if (!form) return;
 
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-        emailjs.send("service_mnhzbph", "template_j6g0hmg", {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          message: document.getElementById("message").value
-        })
-        .then(function() {
-          document.getElementById("formStatus").textContent = "✅ Message sent successfully!";
-          form.reset();
-        }, function(error) {
-          document.getElementById("formStatus").textContent = "❌ Failed to send message. Try again.";
-          console.error("EmailJS error:", error);
-        });
+      emailjs.send("service_mnhzbph", "template_j6g0hmg", {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      })
+      .then(function() {
+        document.getElementById("formStatus").textContent = "✅ Message sent successfully!";
+        form.reset();
+      }, function(error) {
+        document.getElementById("formStatus").textContent = "❌ Failed to send message. Try again.";
+        console.error("EmailJS error:", error);
       });
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
